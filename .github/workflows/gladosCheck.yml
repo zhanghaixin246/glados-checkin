@@ -8,8 +8,8 @@ on:
       - 'README.md'
       - 'imgs/**'
   schedule:
-    - cron: '18 9,12 * * *'
-      timezone: 'Asia/Shanghai'
+    # 对应北京时间（UTC+8）每天早上 09:35 执行（避开高峰排队延迟）
+    - cron: '35 1 * * *'
 
 jobs:
   build:
